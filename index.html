@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css">
-    <title>Weather App</title>
-</head>
-<body>
-<header id="header">
-    <div id="header__location" >
-        <input type="search" id="header__location__input" name="location" placeholder="Enter the location"/>
-     <button id="header__btn">Search</button>
-    </div>
-   
-    
-    <main id="main">
-        <section id="main__app">
-            <h1 id="main__app__city"  >Charleroi</h1>
-            <h2 id="main__app__degrees"  >7 C°</h2>
-            <i class="wi wi-rain" id="main__app__icon"></i>
-            <h3 id="main__app__condition">Rainy day</h3>
-        </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"
+    />
 
+    <script defer src="./assets/script.js"></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header id="header">
+      <h1 id="header__h1">Weather App</h1>
+        <form>
+          <input
+            type="text"
+            id="inputLoca"
+            class="inputLoca"
+            placeholder="Enter the location"
+          />
+          <button type="submit"  id="header__btn">
+            Search
+          </button>
+        </form>
+    </header>
+
+    <main id="main">
+      <section id="main__card">
+        <h2 id="main__card__city"></h2>
+        <h3 id="main__card__degrees"></h3>
+        <h4 id="main__card__date"></h4>
+        <i class="wi wi-rain" id="main__card__icon"></i>
+        <h5 id="main__card__condition"></h5>
+        
+      </section>
+    
     </main>
-</header>
-<script defer src="./assets/script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,49 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   align-content: center;
-  height: 100vh;
+  justify-content: center;
   overflow: hidden;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(farthest-side at top left, rgba(26, 228, 188, 0.5), transparent), radial-gradient(farthest-corner at bottom right, rgba(35, 61, 226, 0.5), transparent), radial-gradient(farthest-side at top right, rgba(255, 0, 255, 0.5), transparent 100vw), radial-gradient(farthest-corner at bottom left, rgba(229, 245, 129, 0.5), transparent);
 }
 
 #header {
-  margin: 1vw;
-  width: 30vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 80%;
 }
-#header__location {
-  background-color: rgba(3, 4, 94, 0.8);
-  padding: 0.8vw;
-  border-radius: 0.5vw;
+#header__h1 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-top: 5%;
 }
-#header__location__input {
-  background-color: #CAF0F8;
+#header form {
+  background-color: rgba(3, 5, 94, 0.138);
+  border-radius: 1vw;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.149);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-top: 2%;
+  padding: 1vw;
+}
+#header form .locaInput {
+  position: relative;
+  left: -2%;
+  width: 60%;
+  background-color: #caf0f8;
   border: none;
   border-radius: 0.3vw;
+  font-size: 1rem;
+  padding: 1vw;
 }
-#header__btn {
-  background-color: #CAF0F8;
-  color: #00B4D8;
+#header form__btn {
+  position: relative;
+  left: 2%;
+  width: 20%;
+  background-color: #caf0f8;
+  color: #00b4d8;
   border: none;
   border-radius: 0.3vw;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 1vw;
 }
 
 #main {
-  background-color: rgba(3, 4, 94, 0.8);
-  border-radius: 0.5vw;
+  margin-top: 3%;
+  background-color: rgba(3, 5, 94, 0.536);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
+  border-radius: 1vw;
+  width: 20%;
 }
-#main__app {
-  color: #00B4D8;
+#main__card {
+  color: #00b4d8;
+  padding-top: 2%;
+  padding-bottom: 3%;
 }
-#main__app__city {
+#main__card__city {
   font-size: 2rem;
+  padding: 0.5%;
+  background: linear-gradient(45deg, #d93dea, #e166b8, #dd9b61);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-#main__app__icon {
-  font-size: 3rem;
-  background: linear-gradient(#015a8a, #009dbc, #bee8f0);
+#main__card__degrees {
+  padding: 0.5%;
+}
+#main__card__date {
+  padding: 0.5%;
+  color: #03045e;
+}
+#main__card__condition {
+  padding: 1%;
+  font-size: larger;
+}
+#main__card__icon {
+  padding-bottom: 2%;
+  font-size: 3.5rem;
+  background: linear-gradient(120deg, #04496e, #0687a0, #84dbed);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
