@@ -1,1 +1,50 @@
-/*# sourceMappingURL=style.css.map */
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+#header {
+  margin: 1vw;
+  width: 30vw;
+}
+#header__location {
+  background-color: rgba(3, 4, 94, 0.8);
+  padding: 0.8vw;
+  border-radius: 0.5vw;
+}
+#header__location__input {
+  background-color: #CAF0F8;
+  border: none;
+  border-radius: 0.3vw;
+}
+#header__btn {
+  background-color: #CAF0F8;
+  color: #00B4D8;
+  border: none;
+  border-radius: 0.3vw;
+}
+
+#main {
+  background-color: rgba(3, 4, 94, 0.8);
+  border-radius: 0.5vw;
+}
+#main__app {
+  color: #00B4D8;
+}
+#main__app__city {
+  font-size: 2rem;
+}
+#main__app__icon {
+  font-size: 3rem;
+  background: linear-gradient(#015a8a, #009dbc, #bee8f0);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=style.css.map */

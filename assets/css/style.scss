@@ -1,0 +1,58 @@
+//variable
+$color-bckgrnd: #03045E;
+$color-elem: #0077B6;
+$color-txt: #00B4D8;
+$light-blue: #90E0EF;
+$cool-blue: #CAF0F8;
+$border-deco: none;
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+     overflow: hidden;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#header{
+    margin: 1vw;
+    width: 30vw;
+    &__location{
+        background-color: rgba(3, 4, 94 ,0.8);
+        padding: 0.8vw;
+        border-radius: 0.5vw;
+        &__input{
+        background-color: $cool-blue;
+        border: $border-deco;
+        border-radius: 0.3vw;
+    }
+    }
+    &__btn{
+        background-color: $cool-blue;
+        color: $color-txt;
+        border: $border-deco;
+        border-radius: 0.3vw;
+    }
+}
+   
+#main{
+ 
+    background-color: rgba(3, 4, 94 ,0.8);
+    border-radius: 0.5vw;
+    &__app{
+        color: $color-txt;
+        &__city{
+            font-size: 2rem;   
+        }
+        &__icon{
+            font-size: 3rem;
+            background: linear-gradient(#015a8a, #009dbc,#bee8f0);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        }
+    }
