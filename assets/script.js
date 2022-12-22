@@ -16,16 +16,16 @@ fetch(url)
 // ICON
 const i = data.list[0].weather[0].description;
     if (i == 'broken clouds') {
-        document.getElementById('main__card__icon').src = './assets/icon/wi-cloudy.svg';
+        document.getElementById('main__card__icon').src = './assets/icon/cloudy.svg';
     }
     else if (i == 'moderate rain','light rain') {
-        document.getElementById('main__card__icon').src = './assets/icon/wi-rain.svg';
+        document.getElementById('main__card__icon').src = './assets/icon/cloud-rain.svg';
     }
     else if (i == 'clear sky', 'scattered clouds') {
-        document.getElementById('main__card__icon').src = './assets/icon/wi-cloud.svg';
+        document.getElementById('main__card__icon').src = './assets/icon/cloud-sun.svg';
     } 
     else 
-        document.getElementById('main__card__icon').src = './assets/icon/wi-sunset.svg';
+        document.getElementById('main__card__icon').src = './assets/icon/brightness-high.svg';
 
 // Autres éléments de la card
     document.querySelector('#main__card__city').innerHTML = data.city.name;
