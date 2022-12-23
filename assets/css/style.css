@@ -32,7 +32,7 @@ body {
   color: #0077b6;
   margin-top: 5%;
 }
-#header form {
+#header__form {
   background-color: rgba(3, 5, 94, 0.138);
   border-radius: 1vw;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.149);
@@ -41,7 +41,7 @@ body {
   margin-top: 2%;
   padding: 1vw;
 }
-#header form .locaInput {
+#header__form .locaInput {
   position: relative;
   left: -2%;
   width: 60%;
@@ -51,7 +51,7 @@ body {
   font-size: 1rem;
   padding: 1vw;
 }
-#header form__btn {
+#header__form__btn {
   position: relative;
   left: 2%;
   width: 20%;
@@ -66,14 +66,16 @@ body {
 
 #main {
   margin-top: 3%;
-  background-color: rgba(3, 5, 94, 0.536);
+  background-color: rgba(3, 5, 94, 0.195);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
   border-radius: 1vw;
   width: 30%;
   height: 40%;
 }
 #main__card {
-  color: #00b4d8;
+  color: #0077b6;
   padding-top: 2%;
   padding-bottom: 3%;
 }
@@ -96,9 +98,9 @@ body {
   padding: 1%;
   font-size: larger;
 }
-#main__card__icon {
+#main__card img {
   padding: 2%;
-  font-size: 1rem;
+  font-size: 3rem;
   background: linear-gradient(120deg, #04496e, #0687a0, #84dbed);
   -webkit-background-clip: text;
           background-clip: text;

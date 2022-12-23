@@ -1,55 +1,105 @@
-// select date 
-var d = new Date();
-var n = d.toLocaleDateString();
-document.getElementById("main__card__date").innerHTML = n;
+let h5 = document.querySelector('#main__card__condition');
+let button = document.querySelector('#header__btn')
+
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 
-//fonction d'appel de l'api
+    
+//fonction d'appel de l'api----------------------------------
 let APIKEY = 'd7ca8fa659de616e6e402bdfe795f4c6'
 function apiCall (city) {
 let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${APIKEY}&units=metric`
 
 fetch(url)
-    .then(resp => resp.json()
-    .then(data => {
+    .then(resp =>  resp.json())
+    .then(json => {
+        localStorage.setItem("data",JSON.stringify(json))
+        console.log(json);
+//------ICON-------------------------------------------
 
-// ICON
-const i = data.list[0].weather[0].description;
-    if (i == 'broken clouds') {
-        document.getElementById('main__card__icon').src = './assets/icon/cloudy.svg';
-    }
-    else if (i == 'moderate rain','light rain') {
-        document.getElementById('main__card__icon').src = './assets/icon/cloud-rain.svg';
-    }
-    else if (i == 'clear sky', 'scattered clouds') {
-        document.getElementById('main__card__icon').src = './assets/icon/cloud-sun.svg';
-    } 
-    else 
-        document.getElementById('main__card__icon').src = './assets/icon/brightness-high.svg';
+    const i = json.list[0].weather[0].main;
+    const l = document.getElementById('main__card__icon');
+         if (i == 'Clouds') {
+             l.src = './assets/icon/cloudy.svg';
+         }
+        else if (i == 'Rain') {
+            l.src = './assets/icon/cloud-rain.svg';
+         }
+        else if (i == 'Clear') {
+            l.src = './assets/icon/cloud-sun.svg';
+        } 
+        else if (i == 'Snow') {
+            l.src = './assets/icon/cloud-snow.svg';
+        } 
+         else if (i == 'Extreme') {
+            l.src = './assets/icon/cloud-lightning-rain.svg';
+         } 
+        else 
+             l.src = './assets/icon/brightness-high.svg';
 
-// Autres éléments de la card
-    document.querySelector('#main__card__city').innerHTML = data.city.name;
-    document.querySelector('#main__card__degrees').innerHTML= data.list[0].main.temp + ' °C';
-    document.querySelector('#main__card__condition').innerHTML = data.list[0].weather[0].description;
-    //console.log(data);
-    })
+    //  éléments de la card-------------------------------
+    document.querySelector('#main__card__city').innerHTML = json.city.name;
+    document.querySelector('#main__card__degrees').innerHTML= json.list[0].main.temp + ' °C';
+    document.querySelector('#main__card__condition').innerHTML = json.list[0].weather[0].main;
+    
+    // select date 
+    let d = new Date();
+    let n = d.toLocaleDateString();
+    document.getElementById("main__card__date").innerHTML = n;
+
+    //add 5 days   
+    let arrDay = [8, 16, 24, 32, 39];
+    for (let elem of arrDay){ 
+    let wkCard = document.createElement('div"');
+    let wkDay = document.createElement('h2');
+    let wkDegrees = document.createElement('h3');
+    let wkDate = document.createElement('h4');
+    let wkCondi = document.createElement('h5')
+    
+   
+    wkDate.innerText=  json.list[elem].dt_txt;
+    wkDay.innerText = json.list[elem].
+
+
+    wkCard.appendChild(wkDate);
+    wkCard.appendChild(wkDay);
+    wkCard.appendChild(wkDegrees);
+    wkCard.appendChild(wkCondi);
+    main.appendChild(wkCard);
+
+
+    }
+    }
+
     )
-    .catch((err)=> console.log('Erreur : ' + err));
+
+
+.catch((err)=> console.log('Erreur : ' + err));
 
 }
 
-// submit du formulaire = écouteur d'evenement
-    document.querySelector('form').addEventListener('submit', function (e){
-    e.preventDefault();
+
+
+// submit du formulaire = écouteur d'evenement--------------------------------------
+    button.addEventListener('click', function (e){
+    e.preventDefault();   
     let selectCity = document.querySelector('#inputLoca').value;
-
     apiCall(selectCity);
-});
+    });
 
-//Appel par défaut au chargement de la page
+//Appel par défaut au chargement de la page------------------------------------------
     apiCall('Brussels');
 
 
+
+
+//---------plus 5 jours------------------------------------------------
+//const fiveDays = [data.list[0], data.list[8], data.list[16], data.list[24], data.list[32]]
+
+  
+
+
+ /*
 // display background 
 
 function getImage (city) {
@@ -66,3 +116,5 @@ function getImage (city) {
     .catch((err)=> console.log('Erreur : ' + err));
 }
     getImage();
+
+    */
