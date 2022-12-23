@@ -50,19 +50,22 @@ fetch(url)
     //add 5 days   
     let arrDay = [8, 16, 24, 32, 39];
     for (let elem of arrDay){ 
-    let wkCard = document.createElement('div"');
-    let wkDay = document.createElement('h2');
+    let wkCard = document.createElement('div');
+
+    //let wkDay = document.createElement('h2');
     let wkDegrees = document.createElement('h3');
     let wkDate = document.createElement('h4');
     let wkCondi = document.createElement('h5')
     
    
-    wkDate.innerText=  json.list[elem].dt_txt;
-    wkDay.innerText = json.list[elem].
+    wkDate.innerText=  json.list[elem].dt_txt.split(" ")[0];
+    //wkDay.innerText = json.list[elem].dt_txt
+    wkDegrees.innerText = json.list[elem].main.temp + ' °C';
+    wkCondi.innerText = json.list[elem].weather[0].main;
 
 
     wkCard.appendChild(wkDate);
-    wkCard.appendChild(wkDay);
+    //wkCard.appendChild(wkDay);
     wkCard.appendChild(wkDegrees);
     wkCard.appendChild(wkCondi);
     main.appendChild(wkCard);
