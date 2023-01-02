@@ -10,7 +10,7 @@ function selectDate () {
     }
     
 
-//fonction d'appel de l'api----------------------------------
+//fonction d'appel de l'api
 let APIKEY = 'd7ca8fa659de616e6e402bdfe795f4c6'
 function apiCall (city) {
 let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${APIKEY}&units=metric`
@@ -21,7 +21,7 @@ fetch(url)
         localStorage.setItem("data",JSON.stringify(json))
         console.log(json);
 
-//------ICON-------------------------------------------
+//------ICON
     const icon = json.list[0].weather[0].main;
     const position = document.getElementById('main__card__icon');
          if (icon == 'Clouds') {
@@ -42,7 +42,7 @@ fetch(url)
         else 
             position.src = './assets/icon/brightness-high.svg';
 
-    //  éléments de la card-------------------------------
+    //  éléments de la card
     ville.innerHTML = json.city.name;
     temperature.innerHTML= json.list[0].main.temp + ' °C';
     condition.innerHTML = json.list[0].weather[0].main;
@@ -52,7 +52,6 @@ fetch(url)
     document.getElementById("main__card__date").innerHTML = getDate;    
 
     //add 5 days
-    function selectMoreDays(){}
     let arrDay = [8, 16, 24, 32, 39];
     for (let elem of arrDay){ 
     let wkCard = document.createElement('div');
@@ -95,7 +94,6 @@ fetch(url)
 
 
   
-
 
  /*
 // display background 
