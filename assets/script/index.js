@@ -34,7 +34,7 @@ function apiCall(city) {
       for (let elem of arrDay) {
         let date = json.list[elem].dt_txt.split(" ")[0];
         let degrees = json.list[elem].main.temp;
-        let condition = json.list[elem].weather[0].main;
+        let condition = json.list[elem].weather[0].main;    
       
         let wkCard = createWeatherCard(date, degrees, condition);
        

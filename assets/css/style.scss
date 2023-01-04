@@ -51,9 +51,9 @@ body {
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 80%;
+  width: 60%;
   &__h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $color-elem;
     margin-top: 5%;
   }
@@ -92,19 +92,25 @@ body {
 }
 
 #main {
-  margin-top: 3%;
-  background-color: rgba(3, 5, 94, 0.195);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
-  border-radius: 1vw;
-  width:30%;
-  height: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  padding-top: 5rem;
   &__card {
+    background-color: rgba(3, 5, 94, 0.195);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
+    border-radius: 1vw;
     color: $color-elem;
-    padding-top: 2%;
-    padding-bottom: 3%;
-    
+    width: 10rem;
+    height: 13rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.20rem;
+        
     &__city {
       font-size: 1.5rem;
       padding: 0.2%;
@@ -123,5 +129,15 @@ body {
         font-size:larger;
     } 
     
+  }
+  .newdiv{
+    width: 10rem;
+    height: 4rem;
+    margin-top: 0.20rem;
+    background-color: rgba(3, 5, 94, 0.195);
+    backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
+    border-radius: 1vw;
   }
 }
