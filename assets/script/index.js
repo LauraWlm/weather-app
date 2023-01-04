@@ -7,21 +7,6 @@ let condition = document.querySelector("#main__card__condition");
 let button = document.querySelector("#header__btn");
 let icon = document.querySelector("#main__card__icon");
 
-
-/*const applyIcon = (weather, position) => {
-    if (weather == "Clouds") {
-    position.src = "./assets/icon/cloudy.svg";
-  } else if (weather == "Rain") {
-    position.src = "./assets/icon/cloud-rain.svg";
-  } else if (weather == "Clear") {
-    position.src = "./assets/icon/cloud-sun.svg";
-  } else if (weather == "Snow") {
-    position.src = "./assets/icon/cloud-snow.svg";
-  } else if (weather == "Extreme") {
-    position.src = "./assets/icon/cloud-lightning-rain.svg";
-  } else position.src = "./assets/icon/brightness-high.svg";
-}*/
-
 //fonction d'appel de l'api
 let APIKEY = "d7ca8fa659de616e6e402bdfe795f4c6";
 function apiCall(city) {
@@ -33,16 +18,12 @@ function apiCall(city) {
       localStorage.setItem("data", JSON.stringify(json));
       console.log(json);
 
-      /* ancienne méthode pour les ICON
-      const icon = json.list[0].weather[0].main;
-      const position = document.getElementById("main__card__icon");
-      applyIcon(icon, position);*/
-  
       //  éléments de la card
       ville.innerHTML = json.city.name;
       temperature.innerHTML = json.list[0].main.temp + " °C";
       condition.innerHTML = json.list[0].weather[0].main;
       icon.src = `http://openweathermap.org/img/wn/${json.list[0].weather[0].icon}@2x.png`;
+    
 
       //Appel Date
       let getDate = selectDate();
@@ -73,25 +54,4 @@ button.addEventListener("click", function (e) {
 
 //Appel par défaut au chargement de la page-
 apiCall("Brussels");
-
-/*
-// display background 
-
-function getImage (city) {
-    let apiKey = 'aSWcN1Sy-zHvqUur-djC6LbeowT1v8mKVGYorM96Apg'
-    let unsplash = `https://api.unsplash.com/search/photos?query=${city}&APPID=${apiKey}` 
-    
-    fetch(unsplash)
-    .then(photo => photo.json()
-    .then(photo => {
-        document.querySelector('body').innerHTML = photo.urls.full;
-        console.log(photo_list)
-    })
-    )
-    .catch((err)=> console.log('Erreur : ' + err));
-}
-    getImage();
-
-    */
-
 
