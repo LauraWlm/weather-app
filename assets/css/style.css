@@ -71,7 +71,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
   border-radius: 1vw;
-  width: 60%;
+  width: 30%;
   height: 40%;
 }
 #main__card {
@@ -80,8 +80,8 @@ body {
   padding-bottom: 3%;
 }
 #main__card__city {
-  font-size: 2rem;
-  padding: 0.5%;
+  font-size: 1.5rem;
+  padding: 0.2%;
   background: linear-gradient(45deg, #d93dea, #e166b8, #dd9b61);
   -webkit-background-clip: text;
           background-clip: text;
@@ -91,18 +91,8 @@ body {
   padding: 0.5%;
 }
 #main__card__date {
-  padding: 0.5%;
   color: #03045e;
 }
 #main__card__condition {
-  padding: 1%;
   font-size: larger;
-}
-#main__card img {
-  padding: 2%;
-  font-size: 3rem;
-  background: linear-gradient(120deg, #04496e, #0687a0, #84dbed);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=style.css.map */

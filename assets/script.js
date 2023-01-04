@@ -10,6 +10,28 @@ function selectDate() {
   return day.toLocaleDateString();
 }
 
+//create card element
+function createWeatherCard(date, degrees, condition) {
+
+  let wkCard = document.createElement("div");
+  let wkDegrees = document.createElement("h3");
+  let wkDate = document.createElement("h4");
+  let wkCondi = document.createElement("h5");
+
+ 
+  wkDate.innerText = date;
+  wkDegrees.innerText = `${degrees} °C`;
+  wkCondi.innerText = condition;
+
+
+  wkCard.appendChild(wkDate);
+  wkCard.appendChild(wkDegrees);
+  wkCard.appendChild(wkCondi);
+
+ 
+  return wkCard;
+}
+
 /*const applyIcon = (weather, position) => {
     if (weather == "Clouds") {
     position.src = "./assets/icon/cloudy.svg";
@@ -54,22 +76,14 @@ function apiCall(city) {
       //add 5 days
       let arrDay = [8, 16, 24, 32, 39];
       for (let elem of arrDay) {
-        let wkCard = document.createElement("div");
-
-        //let wkDay = document.createElement('h2');
-        let wkDegrees = document.createElement("h3");
-        let wkDate = document.createElement("h4");
-        let wkCondi = document.createElement("h5");
-
-        wkDate.innerText = json.list[elem].dt_txt.split(" ")[0];
-        //wkDay.innerText = json.list[elem].dt_txt
-        wkDegrees.innerText = json.list[elem].main.temp + " °C";
-        wkCondi.innerText = json.list[elem].weather[0].main;
-
-        wkCard.appendChild(wkDate);
-        //wkCard.appendChild(wkDay);
-        wkCard.appendChild(wkDegrees);
-        wkCard.appendChild(wkCondi);
+        let date = json.list[elem].dt_txt.split(" ")[0];
+        let degrees = json.list[elem].main.temp;
+        let condition = json.list[elem].weather[0].main;
+      
+        // create the weather card element
+        let wkCard = createWeatherCard(date, degrees, condition);
+      
+        // append the element to the main element
         main.appendChild(wkCard);
       }
     })
