@@ -1,4 +1,5 @@
 import {selectDate} from './modules/date.js';
+import {createWeatherCard} from './modules/createForecast.js';
 
 let ville = document.querySelector("#main__card__city");
 let temperature = document.querySelector("#main__card__degrees");
@@ -6,25 +7,6 @@ let condition = document.querySelector("#main__card__condition");
 let button = document.querySelector("#header__btn");
 let icon = document.querySelector("#main__card__icon");
 
-
-//create card element
-function createWeatherCard(date, degrees, condition) {
-
-  let wkCard = document.createElement("div");
-  let wkDegrees = document.createElement("h3");
-  let wkDate = document.createElement("h4");
-  let wkCondi = document.createElement("h5");
-
-  wkDate.innerText = date;
-  wkDegrees.innerText = `${degrees} °C`;
-  wkCondi.innerText = condition;
-
-  wkCard.appendChild(wkDate);
-  wkCard.appendChild(wkDegrees);
-  wkCard.appendChild(wkCondi);
-
-  return wkCard;
-}
 
 /*const applyIcon = (weather, position) => {
     if (weather == "Clouds") {
