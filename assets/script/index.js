@@ -1,14 +1,11 @@
+import {selectDate} from './modules/date.js';
+
 let ville = document.querySelector("#main__card__city");
 let temperature = document.querySelector("#main__card__degrees");
 let condition = document.querySelector("#main__card__condition");
 let button = document.querySelector("#header__btn");
 let icon = document.querySelector("#main__card__icon");
 
-//select date
-function selectDate() {
-  let day = new Date();
-  return day.toLocaleDateString();
-}
 
 //create card element
 function createWeatherCard(date, degrees, condition) {
