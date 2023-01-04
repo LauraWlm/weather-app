@@ -16,12 +16,12 @@ body {
   align-items: center;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   width: 100vw;
-  height: 100vh;
+  padding-bottom: 5rem;
+  
   background: radial-gradient(
       farthest-side at top left,
       rgba(26, 228, 188, 0.5),
@@ -42,14 +42,15 @@ body {
       rgba(229, 245, 129, 0.5),
       transparent
     );
+    background-repeat:no-repeat;
+    background-size: contain;
+
 }
 
 #header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: fixed;
-  top: 0;
   z-index: 1;
   width: 60%;
   &__h1 {
@@ -98,7 +99,6 @@ body {
   justify-content: space-around;
   align-content: center;
   width: 100%;
-  padding-top: 5rem;
   &__card {
     background-color: rgba(3, 5, 94, 0.195);
     backdrop-filter: blur(5px);
@@ -108,7 +108,7 @@ body {
     color: $color-elem;
     width: 10rem;
     height: 13rem;
-    margin-top: 0.8rem;
+    margin-top: 2rem;
     margin-bottom: 0.20rem;
         
     &__city {
@@ -133,11 +133,12 @@ body {
   .newdiv{
     width: 10rem;
     height: 6rem;
-    margin-top: 0.20rem;
+    margin-top: 1rem;
     background-color: rgba(3, 5, 94, 0.195);
     backdrop-filter: blur(5px);
    -webkit-backdrop-filter: blur(5px);
    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
     border-radius: 1vw;
+    padding-bottom: 10rem;
   }
 }

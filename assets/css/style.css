@@ -10,20 +10,19 @@ body {
   align-items: center;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   width: 100vw;
-  height: 100vh;
+  padding-bottom: 5rem;
   background: radial-gradient(farthest-side at top left, rgba(26, 228, 188, 0.5), transparent), radial-gradient(farthest-corner at bottom right, rgba(35, 61, 226, 0.5), transparent), radial-gradient(farthest-side at top right, rgba(255, 0, 255, 0.5), transparent 100vw), radial-gradient(farthest-corner at bottom left, rgba(229, 245, 129, 0.5), transparent);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  position: fixed;
-  top: 0;
   z-index: 1;
   width: 60%;
 }
@@ -71,7 +70,6 @@ body {
   justify-content: space-around;
   align-content: center;
   width: 100%;
-  padding-top: 5rem;
 }
 #main__card {
   background-color: rgba(3, 5, 94, 0.195);
@@ -82,7 +80,7 @@ body {
   color: #0077b6;
   width: 10rem;
   height: 13rem;
-  margin-top: 0.8rem;
+  margin-top: 2rem;
   margin-bottom: 0.2rem;
 }
 #main__card__city {
@@ -105,10 +103,11 @@ body {
 #main .newdiv {
   width: 10rem;
   height: 6rem;
-  margin-top: 0.2rem;
+  margin-top: 1rem;
   background-color: rgba(3, 5, 94, 0.195);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.219);
   border-radius: 1vw;
+  padding-bottom: 10rem;
 }/*# sourceMappingURL=style.css.map */
