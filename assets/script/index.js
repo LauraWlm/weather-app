@@ -1,5 +1,5 @@
-import {selectDate} from './modules/date.js';
-import {createWeatherCard} from './modules/createForecast.js';
+import {selectDate} from './model/date.js';
+import {createWeatherCard} from './view/createForecast.js';
 
 let ville = document.querySelector("#main__card__city");
 let temperature = document.querySelector("#main__card__degrees");
