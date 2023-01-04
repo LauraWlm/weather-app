@@ -18,17 +18,14 @@ function createWeatherCard(date, degrees, condition) {
   let wkDate = document.createElement("h4");
   let wkCondi = document.createElement("h5");
 
- 
   wkDate.innerText = date;
   wkDegrees.innerText = `${degrees} °C`;
   wkCondi.innerText = condition;
-
 
   wkCard.appendChild(wkDate);
   wkCard.appendChild(wkDegrees);
   wkCard.appendChild(wkCondi);
 
- 
   return wkCard;
 }
 
@@ -62,7 +59,6 @@ function apiCall(city) {
       const position = document.getElementById("main__card__icon");
       applyIcon(icon, position);*/
   
-
       //  éléments de la card
       ville.innerHTML = json.city.name;
       temperature.innerHTML = json.list[0].main.temp + " °C";
@@ -80,10 +76,8 @@ function apiCall(city) {
         let degrees = json.list[elem].main.temp;
         let condition = json.list[elem].weather[0].main;
       
-        // create the weather card element
         let wkCard = createWeatherCard(date, degrees, condition);
-      
-        // append the element to the main element
+       
         main.appendChild(wkCard);
       }
     })
