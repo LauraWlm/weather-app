@@ -1,6 +1,6 @@
 import {selectDate} from './model/date.js';
 import {createWeatherCard} from './view/createForecast.js';
-
+import {APP} from './model/app.js';
 let ville = document.querySelector("#main__card__city");
 let temperature = document.querySelector("#main__card__degrees");
 let condition = document.querySelector("#main__card__condition");
@@ -10,7 +10,7 @@ let icon = document.querySelector("#main__card__icon");
 //fonction d'appel de l'api
 let APIKEY = "d7ca8fa659de616e6e402bdfe795f4c6";
 function apiCall(city) {
-  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${APIKEY}&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=${APP.APIKEY.openWeatherKey}&units=metric`;
 
   fetch(url)
     .then((resp) => resp.json())
