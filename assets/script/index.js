@@ -36,7 +36,7 @@ function apiCall(city) {
         let date = json.list[elem].dt_txt.split(" ")[0];
         let degrees = json.list[elem].main.temp;
         let condition = json.list[elem].weather[0].main;
-        let icons = `http://openweathermap.org/img/wn/${json.list[0].weather[0].icon}@2x.png`;
+        let icons = `http://openweathermap.org/img/wn/${json.list[elem].weather[0].icon}@2x.png`;
       
         let wkCard = createWeatherCard(date, degrees, condition, icons);
        

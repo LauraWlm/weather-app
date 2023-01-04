@@ -14,9 +14,9 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   width: 100vw;
   padding-bottom: 5rem;
-  background: radial-gradient(farthest-side at top left, rgba(26, 228, 188, 0.5), transparent), radial-gradient(farthest-corner at bottom right, rgba(35, 61, 226, 0.5), transparent), radial-gradient(farthest-side at top right, rgba(255, 0, 255, 0.5), transparent 100vw), radial-gradient(farthest-corner at bottom left, rgba(229, 245, 129, 0.5), transparent);
+  background-image: url(../image/font1.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 #header {
